@@ -1,0 +1,21 @@
+<?php 
+ob_start();
+session_start();
+if(isset($_SESSION['USER_ID']))
+{
+	unset($_SESSION['USER_ID']);
+}
+if(isset($_SESSION['USER_NAME']))
+{
+	unset($_SESSION['USER_NAME']);
+}
+if(isset($_SESSION['USER_EMAIL']))
+{
+	unset($_SESSION['USER_EMAIL']);
+}
+if(isset($_SESSION['USER_PHONE']))
+{
+	unset($_SESSION['USER_PHONE']);
+}
+header("location:login.php");
+?>
